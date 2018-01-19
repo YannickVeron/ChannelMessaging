@@ -38,8 +38,8 @@ public class LoginActivity extends Activity implements View.OnClickListener, OnD
     public void onClick(View v) {
         debug.setText("Debug :");
         HashMap data = new HashMap<String, String>();
-        data.put("username", login.getText());
-        data.put("password", password.getText());
+        data.put("username", login.getText().toString());
+        data.put("password", password.getText().toString());
         PostRequest pr = new PostRequest("http://www.raphaelbischof.fr/messaging/?function=connect",data);
         HttpPostHandler ph = new HttpPostHandler();
         ph.addOnDownloadListener(this);
