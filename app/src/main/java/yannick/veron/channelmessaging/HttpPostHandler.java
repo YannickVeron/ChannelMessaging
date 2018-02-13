@@ -3,14 +3,12 @@ package yannick.veron.channelmessaging;
 
 import android.os.AsyncTask;
 
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -44,6 +42,7 @@ public class HttpPostHandler extends AsyncTask<PostRequest,Integer,String> {
     @Override
     protected void onPostExecute(String result) {
         for (OnDownloadListener oneListener:listeners) {
+
             oneListener.onDownloadComplete(result);
         }
     }
@@ -95,7 +94,6 @@ public class HttpPostHandler extends AsyncTask<PostRequest,Integer,String> {
                 }
                 return result.toString();
     }
-
 
 
 
