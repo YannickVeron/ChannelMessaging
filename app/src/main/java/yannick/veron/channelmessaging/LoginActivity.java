@@ -16,6 +16,8 @@ import com.google.gson.GsonBuilder;
 
 import java.util.HashMap;
 
+import yannick.veron.channelmessaging.Frag.ChannelListFragment;
+import yannick.veron.channelmessaging.model.ChannelList;
 import yannick.veron.channelmessaging.model.connect;
 
 public class LoginActivity extends Activity implements View.OnClickListener, OnDownloadListener {
@@ -94,7 +96,8 @@ public class LoginActivity extends Activity implements View.OnClickListener, OnD
         }
         else
         {
-            Intent myIntent = new Intent(getApplicationContext(),ChannelListActivity.class);
+            //Intent myIntent = new Intent(getApplicationContext(),ChannelListActivity.class);
+            Intent myIntent = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(myIntent);
         }
 

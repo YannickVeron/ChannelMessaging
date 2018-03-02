@@ -30,7 +30,7 @@ public class HttpPostHandler extends AsyncTask<PostRequest,Integer,String> {
         return listeners;
     }
 
-    void addOnDownloadListener(OnDownloadListener listener) {
+    public void addOnDownloadListener(OnDownloadListener listener) {
         this.listeners.add(listener);
     }
 

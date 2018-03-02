@@ -26,7 +26,7 @@ public class ChannelListActivity extends Activity implements View.OnClickListene
 
     public static final String PREFS_NAME = " MyPrefsFile ";
     public ListView lv;
-    public Button flButton;
+    //public Button flButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +39,8 @@ public class ChannelListActivity extends Activity implements View.OnClickListene
         data.put("accesstoken",token);
 
         lv = (ListView) findViewById(R.id.listChannel);
-        flButton = (Button) findViewById(R.id.btFriendList);
-        flButton.setOnClickListener(this);
+        /*flButton = (Button) findViewById(R.id.btFriendList);
+        flButton.setOnClickListener(this);*/
 
 
         PostRequest pr = new PostRequest("http://www.raphaelbischof.fr/messaging/?function=getchannels",data);
