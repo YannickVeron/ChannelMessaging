@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="yannick.veron.channelmessaging">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application
 
         android:allowBackup="true"
@@ -40,6 +41,10 @@
         <activity
             android:name=".MessageFragContainer"
             android:label="MessageFragContainer">
+        </activity>
+        <activity
+            android:name=".FriendList"
+            android:label="FriendList">
         </activity>
 
 
