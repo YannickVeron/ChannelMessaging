@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -66,10 +67,12 @@ public class LoginActivity extends Activity implements View.OnClickListener, OnD
     @Override
     public void onDownloadComplete(String downloadedContent) {
         final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        Log.d("gson",""+gson);
         connect connection = gson.fromJson(downloadedContent, connect.class);
+        Log.d("connection",""+connection);
 
-
-        debug.setText(debug.getText()+"\n<start>\nCode : "+connection.getCode()+"\n<end>");
+        //debug.setText(debug.getText()+"\n<start>\nCode : "+connection.getCode()+"\n<end>");
 
 
 

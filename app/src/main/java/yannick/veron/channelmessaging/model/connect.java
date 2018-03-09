@@ -31,4 +31,10 @@ public class connect {
     public void setAccesstoken(String accesstoken) {
         this.accesstoken = accesstoken;
     }
+
+    @Override
+    public String toString()
+    {
+        return "resp : "+getResponse()+" code : "+getCode()+" access : "+getAccesstoken();
+    }
 }
